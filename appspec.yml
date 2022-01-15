@@ -1,0 +1,10 @@
+version: 0.0
+os: windows
+files:
+  - source: **/*.war
+    destination: c:\_tools\tomcat\webapps
+hooks:
+  BeforeInstall:
+    - location: install.bat
+      timeout: 60
+      runas: administrator
